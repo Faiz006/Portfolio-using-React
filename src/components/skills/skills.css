@@ -1,0 +1,112 @@
+.skills.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Create two equal columns */
+    gap: 20px;
+    /* Adjust the gap between skill bars */
+    justify-content: space-between;
+}
+
+.skills-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.skill__container {
+    column-gap: 1.875rem;
+}
+
+.skill__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.skill__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills__number {
+    line-height: 1.2;
+}
+
+.skills__bar,
+.skills__percentage {
+    height: 7px;
+    border-radius: 0.25rem;
+    animation: fillBars 2.5s 1;
+}
+
+.skills__bar {
+    background-color: #f1f1f1;
+}
+
+.skills__percentage {
+    display: block;
+}
+
+.html,
+.css,
+.js,
+.java,
+.react,
+.unity {
+    max-width: 100%;
+    /* Each skill bar takes 100% width of its column */
+    background-color: #f1f1f1;
+    /* Set a background color for all skill bars */
+}
+
+.html {
+    background-color: rgb(255, 209, 92);
+    max-width: 85%;
+}
+
+.css {
+    background-color: #FF6D60;
+    max-width: 75%;
+}
+
+.js {
+    background-color: #FA9494;
+    max-width: 50%;
+}
+
+.java {
+    background-color: #A076F9;
+    max-width: 70%;
+}
+
+.react {
+    background-color: rgb(108, 108, 299);
+    max-width: 30%;
+}
+
+.unity {
+    background-color: #00DFA2;
+    max-width: 20%;
+}
+
+.skills {
+    padding: 1.875rem;
+    background-color: var(--container-color);
+    border-radius: var(--border-radius);
+    align-items: flex-start;
+    position: relative;
+}
+
+.skill__date {
+    padding-bottom: 2rem;
+}
+
+@keyframes fillBars {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
